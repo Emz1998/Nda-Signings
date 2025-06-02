@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NDA Agreement - VibeMatch App Plan</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nda-form" id="ndaForm">
+        <h1>📄 NDA Agreement</h1>
+        <p>Please review and sign the NDA to access the VibeMatch App Plan</p>
+        <form id="signatureForm">
+          <label for="fullName">Full Legal Name *</label>
+          <input type="text" id="fullName" required />
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required />
+          <label>Signature *</label>
+          <canvas id="signatureCanvas" width="400" height="150"></canvas>
+          <button type="button" id="clearSignature">Clear Signature</button>
+          <input type="checkbox" id="agreeTerms" /> I agree to the NDA terms
+          <button type="submit" id="signButton" disabled>🖋️ Sign NDA & Access</button>
+        </form>
+      </div>
+
+      <div class="document-viewer" id="documentViewer" style="display: none">
+        <h2>📱 VibeMatch App Plan - Confidential Document</h2>
+        <p>This document contains proprietary information protected under the signed NDA.</p>
+        <h3>Overview</h3>
+        <p>VibeMatch is a dating app that prioritizes emotional intelligence over appearance...</p>
+        <!-- Add more content as needed -->
+      </div>
+    </div>
+  </body>
+</html>
